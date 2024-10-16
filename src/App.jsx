@@ -1,15 +1,18 @@
-import { useState } from "react";
-import Count from "./components/Count";
+import FilterAbleProductTable from "./Product/FilterAbleProductTable";
+
 
 const App = () => {
-const [count, setCount] = useState(0)
-const handleClick = () =>{
-  setCount(count + 1)
-}
+  const PRODUCTS = [
+    {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
+    {category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit"},
+    {category: "Fruits", price: "$2", stocked: false, name: "Passionfruit"},
+    {category: "Vegetables", price: "$2", stocked: true, name: "Spinach"},
+    {category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin"},
+    {category: "Vegetables", price: "$1", stocked: true, name: "Peas"}
+  ];
   return (
     <div>
-        <Count count = {count} onClick = {handleClick}/>
-        <Count count = {count} onClick = {handleClick}/>
+        <FilterAbleProductTable products = {PRODUCTS}/>
     </div>
   )
 };

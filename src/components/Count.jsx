@@ -1,9 +1,12 @@
-/* eslint-disable react/prop-types */
-const Count = ({count, onClick}) => {
-
+import { useState } from "react";
+const Count = () => {
+    const [count, setCount] = useState(0)
+    const handleClick = () =>{
+      setCount(count + 1)
+    }
     return (
         <div>
-            <button onClick={onClick}> count: {count}</button>  
+            <button onClick={handleClick}> count: {count}</button>  
         </div>
     );
 };
