@@ -1,7 +1,12 @@
-import Gellary from "./components/Gallery/Gellary";
 // import Send from "./components/Send";
 
+import List from "./components/List";
+
+// import Form from "./components/Form";
+// import TrafficLight from "./components/TrafficLight";
+
 // import FilterAbleProductTable from "./Product/FilterAbleProductTable";
+// import Toolbar from './components/Toolbar';
 const App = () => {
   // const PRODUCTS = [
   //   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -14,8 +19,14 @@ const App = () => {
   return (
     <div>
         {/* <FilterAbleProductTable products = {PRODUCTS}/> */}
-        <Gellary/>
-        {/* <Send/> */}
+      {/* <Send/> */}
+      {/* <Toolbar
+        onPlayMovie = {()=> alert('Playing....')}
+        onUploadImage = {()=> alert('Uploading...!')}
+      /> */}
+      {/* <TrafficLight/> */}
+      {/* <Form/> */}
+      <List/>
     </div>
   )
 };

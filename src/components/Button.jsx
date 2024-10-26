@@ -1,7 +1,10 @@
-const Button = () => {
+/* eslint-disable react/prop-types */
+const Button = ({onClick, children}) => {
     return (
         <div>
-            <button>I am a button</button>
+            <button onClick={onClick}>
+                {children}
+            </button>
         </div>
     );
 };

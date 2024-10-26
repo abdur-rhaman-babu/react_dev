@@ -1,33 +1,35 @@
 import { useState } from "react";
 
+
 const Send = () => {
-    const [to, setTo] = useState('Alice')
+    const [to, setTo] = useState('Siyam')
     const [message, setMessage] = useState('Hello')
 
-    const handleSubmit = (e) =>{
+    const handleFormSubmit = (e) =>{
         e.preventDefault()
         setTimeout(()=>{
-            alert(`You said ${message} to ${to}`)
+            alert(`${to} send ${message} to you`)
         },2000)
     }
-
     return (
-        <form onSubmit={handleSubmit}>
-            <label> To:
-                <select value={to} onChange={(e)=>setTo(e.target.value)}>
-                    <option value="Alice">Alice</option>
-                    <option value="Bob">Bob</option>
+        <>
+            <form onSubmit={handleFormSubmit}>
+            <label>To: {' '}
+                <select 
+                value={to} 
+                onChange={(e)=>setTo(e.target.value)}
+                >
+                    <option value="Siyam">Siyam</option>
+                    <option value="Arafat">Arafat</option>
                 </select>
-            </label>
-            <br /> <br />
-            <textarea 
-            placeholder="message" 
+            </label> <br /><br />
+            <textarea
             value={message}
             onChange={(e)=>setMessage(e.target.value)}
-            />
-            <br /> <br />
-            <button type="submit">send</button>
+            /> <br /> <br />
+            <button type="submit">Send</button>
         </form>
+        </>
     );
 };
 
